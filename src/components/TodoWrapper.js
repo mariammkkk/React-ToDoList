@@ -33,6 +33,33 @@ export const TodoWrapper = () => {
         setTodos(todos.map(todo => todo.id === id ? {...todo, task, isEditing: !todo.isEditing} : todo))
     }
 
+    const moveUp = (id) => {
+        const index = todos.findIndex(todo => todo.id === id);
+        if (index > 0) {
+            const updatedTodos = [...todos];
+            // Swap elements
+            const temp = updatedTodos[index];
+            updatedTodos[index] = updatedTodos[index-1];
+            updatedTodos[index - 1] = temp;
+            // Update
+            setTodos(updatedTodos);
+        }
+    }
+
+    const moveDown = (id) => {
+        const index = todos.findIndex(todo => todo.id === id);
+        if (index < todos.length - 1) {
+            const updatedTodos = [...todos];
+            // Swap elements
+            const temp = updatedTodos[index];
+            updatedTodos[index] = updatedTodos[index+1];
+            updatedTodos[index + 1] = temp;
+            // Update
+            setTodos(updatedTodos);
+        }
+    }
+
+
     return (
         <div className='TodoWrapper'>
             <h1>To-Do List:</h1>
@@ -46,7 +73,10 @@ export const TodoWrapper = () => {
                     <Todo task={todo} key={index} 
                     toggleComplete={toggleComplete}
                     deleteTodo={deleteTodo}
-                    editTodo={editTodo} />
+                    editTodo={editTodo} 
+                    moveUp={moveUp}
+                    moveDown={moveDown}
+                    />
                 )
 
             ))}
