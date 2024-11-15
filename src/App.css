@@ -59,6 +59,14 @@ h1 {
   cursor: pointer;
 }
 
+.todo-btn:hover {
+  background: #1563c2;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
 .Todo {
   display: flex;
   justify-content: space-between;
@@ -89,4 +97,3 @@ h1 {
 .delete-icon {
   cursor: pointer;
 }
- 
