@@ -11,6 +11,8 @@ This React application demonstrates various components and features of React to 
 3. Editing tasks
 4. Reordering tasks by moving them up/down
 
+## Deployment Link: https://splendid-beijinho-668dd9.netlify.app/ 
+
 ## To Run the Program: `npm start`
 
 Runs the app in the development mode.\
