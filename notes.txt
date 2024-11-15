@@ -1,7 +1,7 @@
 **SETTING UP ENVIRONMENT:**
 
 npm create-react-app todo-list
-npm i u uid
+npm i u uid // use this to create ids for all todos
 
 
 **REACT ICONS:**
